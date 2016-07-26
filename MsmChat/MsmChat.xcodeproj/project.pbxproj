@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		624A5A6E1D3CBAAC00E9D0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5A6D1D3CBAAC00E9D0F0 /* main.m */; };
+		624A5AAC1D3CBC4900E9D0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624A5AA61D3CBC4900E9D0F0 /* Assets.xcassets */; };
+		624A5AAE1D3CBC4900E9D0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5AAA1D3CBC4900E9D0F0 /* AppDelegate.m */; };
+		624A5AB01D3CBD4B00E9D0F0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 624A5AAF1D3CBD4B00E9D0F0 /* Info.plist */; };
+		624A5AFD1D3CC34400E9D0F0 /* MLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5AFC1D3CC34400E9D0F0 /* MLoginManager.m */; };
+		624A5B001D3CC6AB00E9D0F0 /* MLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5AFF1D3CC6AB00E9D0F0 /* MLoginViewController.m */; };
+		624A5C6F1D3DBFDC00E9D0F0 /* libMBaseViewProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624A5C691D3DBF1900E9D0F0 /* libMBaseViewProject.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		624A5C681D3DBF1900E9D0F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624A5C641D3DBF1900E9D0F0 /* MBaseViewProject.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 624A5C5B1D3DBF0400E9D0F0;
+			remoteInfo = MBaseViewProject;
+		};
+		624A5C6D1D3DBFD700E9D0F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624A5C641D3DBF1900E9D0F0 /* MBaseViewProject.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 624A5C5A1D3DBF0400E9D0F0;
+			remoteInfo = MBaseViewProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		624A5A691D3CBAAC00E9D0F0 /* MsmChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MsmChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		624A5A6D1D3CBAAC00E9D0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		624A5A861D3CBAAC00E9D0F0 /* MsmChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsmChatTests.m; sourceTree = "<group>"; };
+		624A5A881D3CBAAC00E9D0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		624A5A911D3CBAAC00E9D0F0 /* MsmChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsmChatUITests.m; sourceTree = "<group>"; };
+		624A5A931D3CBAAC00E9D0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		624A5AA61D3CBC4900E9D0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		624A5AA91D3CBC4900E9D0F0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		624A5AAA1D3CBC4900E9D0F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		624A5AAF1D3CBD4B00E9D0F0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		624A5AFB1D3CC34400E9D0F0 /* MLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLoginManager.h; sourceTree = "<group>"; };
+		624A5AFC1D3CC34400E9D0F0 /* MLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLoginManager.m; sourceTree = "<group>"; };
+		624A5AFE1D3CC6AB00E9D0F0 /* MLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLoginViewController.h; sourceTree = "<group>"; };
+		624A5AFF1D3CC6AB00E9D0F0 /* MLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLoginViewController.m; sourceTree = "<group>"; };
+		624A5BCC1D3CCE1300E9D0F0 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		624A5BCE1D3CCE1300E9D0F0 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		624A5C641D3DBF1900E9D0F0 /* MBaseViewProject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBaseViewProject.xcodeproj; path = MBaseViewProject/MBaseViewProject.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		624A5A661D3CBAAC00E9D0F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				624A5C6F1D3DBFDC00E9D0F0 /* libMBaseViewProject.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		624A5A601D3CBAAC00E9D0F0 = {
+			isa = PBXGroup;
+			children = (
+				624A5B021D3CC7AF00E9D0F0 /* Projects */,
+				624A5A6B1D3CBAAC00E9D0F0 /* MsmChat */,
+				624A5A851D3CBAAC00E9D0F0 /* MsmChatTests */,
+				624A5A901D3CBAAC00E9D0F0 /* MsmChatUITests */,
+				624A5BCB1D3CCE1300E9D0F0 /* Test */,
+				624A5A6A1D3CBAAC00E9D0F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		624A5A6A1D3CBAAC00E9D0F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				624A5A691D3CBAAC00E9D0F0 /* MsmChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		624A5A6B1D3CBAAC00E9D0F0 /* MsmChat */ = {
+			isa = PBXGroup;
+			children = (
+				624A5AA21D3CBC4900E9D0F0 /* 界面 */,
+				624A5AA51D3CBC4900E9D0F0 /* 资源 */,
+				624A5AA81D3CBC4900E9D0F0 /* AppDelegate */,
+				624A5A6C1D3CBAAC00E9D0F0 /* Supporting Files */,
+			);
+			path = MsmChat;
+			sourceTree = "<group>";
+		};
+		624A5A6C1D3CBAAC00E9D0F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				624A5A6D1D3CBAAC00E9D0F0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		624A5A851D3CBAAC00E9D0F0 /* MsmChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				624A5A861D3CBAAC00E9D0F0 /* MsmChatTests.m */,
+				624A5A881D3CBAAC00E9D0F0 /* Info.plist */,
+			);
+			path = MsmChatTests;
+			sourceTree = "<group>";
+		};
+		624A5A901D3CBAAC00E9D0F0 /* MsmChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				624A5A911D3CBAAC00E9D0F0 /* MsmChatUITests.m */,
+				624A5A931D3CBAAC00E9D0F0 /* Info.plist */,
+			);
+			path = MsmChatUITests;
+			sourceTree = "<group>";
+		};
+		624A5AA21D3CBC4900E9D0F0 /* 界面 */ = {
+			isa = PBXGroup;
+			children = (
+				624A5AF71D3CC2B000E9D0F0 /* 登录界面 */,
+			);
+			path = "界面";
+			sourceTree = "<group>";
+		};
+		624A5AA51D3CBC4900E9D0F0 /* 资源 */ = {
+			isa = PBXGroup;
+			children = (
+				624A5AAF1D3CBD4B00E9D0F0 /* Info.plist */,
+				624A5AA61D3CBC4900E9D0F0 /* Assets.xcassets */,
+			);
+			path = "资源";
+			sourceTree = "<group>";
+		};
+		624A5AA81D3CBC4900E9D0F0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				624A5AA91D3CBC4900E9D0F0 /* AppDelegate.h */,
+				624A5AAA1D3CBC4900E9D0F0 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		624A5AF71D3CC2B000E9D0F0 /* 登录界面 */ = {
+			isa = PBXGroup;
+			children = (
+				624A5AFB1D3CC34400E9D0F0 /* MLoginManager.h */,
+				624A5AFC1D3CC34400E9D0F0 /* MLoginManager.m */,
+				624A5AFE1D3CC6AB00E9D0F0 /* MLoginViewController.h */,
+				624A5AFF1D3CC6AB00E9D0F0 /* MLoginViewController.m */,
+			);
+			path = "登录界面";
+			sourceTree = "<group>";
+		};
+		624A5B021D3CC7AF00E9D0F0 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				624A5C641D3DBF1900E9D0F0 /* MBaseViewProject.xcodeproj */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		624A5BCB1D3CCE1300E9D0F0 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				624A5BCC1D3CCE1300E9D0F0 /* Test.h */,
+				624A5BCE1D3CCE1300E9D0F0 /* Test.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		624A5C651D3DBF1900E9D0F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				624A5C691D3DBF1900E9D0F0 /* libMBaseViewProject.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		624A5A681D3CBAAC00E9D0F0 /* MsmChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 624A5A961D3CBAAC00E9D0F0 /* Build configuration list for PBXNativeTarget "MsmChat" */;
+			buildPhases = (
+				624A5A651D3CBAAC00E9D0F0 /* Sources */,
+				624A5A661D3CBAAC00E9D0F0 /* Frameworks */,
+				624A5A671D3CBAAC00E9D0F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				624A5C6E1D3DBFD700E9D0F0 /* PBXTargetDependency */,
+			);
+			name = MsmChat;
+			productName = MsmChat;
+			productReference = 624A5A691D3CBAAC00E9D0F0 /* MsmChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		624A5A611D3CBAAC00E9D0F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = mengxx;
+				TargetAttributes = {
+					624A5A681D3CBAAC00E9D0F0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 37BDWDMEQ8;
+					};
+				};
+			};
+			buildConfigurationList = 624A5A641D3CBAAC00E9D0F0 /* Build configuration list for PBXProject "MsmChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 624A5A601D3CBAAC00E9D0F0;
+			productRefGroup = 624A5A6A1D3CBAAC00E9D0F0 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 624A5C651D3DBF1900E9D0F0 /* Products */;
+					ProjectRef = 624A5C641D3DBF1900E9D0F0 /* MBaseViewProject.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				624A5A681D3CBAAC00E9D0F0 /* MsmChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		624A5C691D3DBF1900E9D0F0 /* libMBaseViewProject.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMBaseViewProject.a;
+			remoteRef = 624A5C681D3DBF1900E9D0F0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		624A5A671D3CBAAC00E9D0F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				624A5AB01D3CBD4B00E9D0F0 /* Info.plist in Resources */,
+				624A5AAC1D3CBC4900E9D0F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		624A5A651D3CBAAC00E9D0F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				624A5A6E1D3CBAAC00E9D0F0 /* main.m in Sources */,
+				624A5AAE1D3CBC4900E9D0F0 /* AppDelegate.m in Sources */,
+				624A5AFD1D3CC34400E9D0F0 /* MLoginManager.m in Sources */,
+				624A5B001D3CC6AB00E9D0F0 /* MLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		624A5C6E1D3DBFD700E9D0F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBaseViewProject;
+			targetProxy = 624A5C6D1D3DBFD700E9D0F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		624A5A941D3CBAAC00E9D0F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		624A5A951D3CBAAC00E9D0F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		624A5A971D3CBAAC00E9D0F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MsmChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.MsmChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/MBaseViewProject";
+			};
+			name = Debug;
+		};
+		624A5A981D3CBAAC00E9D0F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = MsmChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.MsmChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/MBaseViewProject";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		624A5A641D3CBAAC00E9D0F0 /* Build configuration list for PBXProject "MsmChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				624A5A941D3CBAAC00E9D0F0 /* Debug */,
+				624A5A951D3CBAAC00E9D0F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		624A5A961D3CBAAC00E9D0F0 /* Build configuration list for PBXNativeTarget "MsmChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				624A5A971D3CBAAC00E9D0F0 /* Debug */,
+				624A5A981D3CBAAC00E9D0F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 624A5A611D3CBAAC00E9D0F0 /* Project object */;
+}
