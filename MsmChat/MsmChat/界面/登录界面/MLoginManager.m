@@ -15,6 +15,7 @@
 }
 - (void) loginJudgement
 {
+    NSLog(@"test");
     //判断是否首次进入新版本
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"isNewLaunch"]){
 //        [self showLeadPage];//加载-引导页
