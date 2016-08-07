@@ -11,6 +11,8 @@
 		624A5C7C1D3DC26700E9D0F0 /* MBaseViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 624A5C791D3DC25100E9D0F0 /* MBaseViewController.h */; };
 		624A5C7F1D3DC2FA00E9D0F0 /* MTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5C7E1D3DC2FA00E9D0F0 /* MTableViewController.m */; };
 		624A5C821D3DC30F00E9D0F0 /* MRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5C811D3DC30F00E9D0F0 /* MRefreshTableViewController.m */; };
+		62D105E21D4DB6EC0023A1AE /* MTableViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 624A5C7D1D3DC2FA00E9D0F0 /* MTableViewController.h */; };
+		62D105E31D4DB6EC0023A1AE /* MRefreshTableViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 624A5C801D3DC30F00E9D0F0 /* MRefreshTableViewController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,6 +22,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				62D105E21D4DB6EC0023A1AE /* MTableViewController.h in CopyFiles */,
+				62D105E31D4DB6EC0023A1AE /* MRefreshTableViewController.h in CopyFiles */,
 				624A5C7C1D3DC26700E9D0F0 /* MBaseViewController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
