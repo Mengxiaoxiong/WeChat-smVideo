@@ -188,6 +188,9 @@
 		624A5AFE1D3CC6AB00E9D0F0 /* MLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLoginViewController.h; sourceTree = "<group>"; };
 		624A5AFF1D3CC6AB00E9D0F0 /* MLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLoginViewController.m; sourceTree = "<group>"; };
 		624A5C641D3DBF1900E9D0F0 /* MBaseViewProject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBaseViewProject.xcodeproj; path = MBaseViewProject/MBaseViewProject.xcodeproj; sourceTree = "<group>"; };
+		62821F101D66B19300B77F0B /* IMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMConstants.h; sourceTree = "<group>"; };
+		62821F121D66B1C200B77F0B /* SynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		62821F131D66B24F00B77F0B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,6 +494,7 @@
 		624A5A6B1D3CBAAC00E9D0F0 /* MsmChat */ = {
 			isa = PBXGroup;
 			children = (
+				62821F0E1D66B19300B77F0B /* 工具 */,
 				624A5AA21D3CBC4900E9D0F0 /* 界面 */,
 				624A5AA51D3CBC4900E9D0F0 /* 资源 */,
 				624A5AA81D3CBC4900E9D0F0 /* AppDelegate */,
@@ -504,6 +508,7 @@
 			children = (
 				624A5A6D1D3CBAAC00E9D0F0 /* main.m */,
 				19A9EF0C1D61D9A5008CCB56 /* Main.storyboard */,
+				62821F131D66B24F00B77F0B /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -583,6 +588,31 @@
 				624A5C691D3DBF1900E9D0F0 /* libMBaseViewProject.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		62821F0E1D66B19300B77F0B /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				62821F111D66B1B300B77F0B /* Utility */,
+				62821F0F1D66B19300B77F0B /* 程序主配置 */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		62821F0F1D66B19300B77F0B /* 程序主配置 */ = {
+			isa = PBXGroup;
+			children = (
+				62821F101D66B19300B77F0B /* IMConstants.h */,
+			);
+			path = "程序主配置";
+			sourceTree = "<group>";
+		};
+		62821F111D66B1B300B77F0B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				62821F121D66B1C200B77F0B /* SynthesizeSingleton.h */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,6 +875,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = MsmChat/PrefixHeader.pch;
 				INFOPLIST_FILE = MsmChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im.MsmChat;
@@ -862,6 +893,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = MsmChat/PrefixHeader.pch;
 				INFOPLIST_FILE = MsmChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im.MsmChat;
