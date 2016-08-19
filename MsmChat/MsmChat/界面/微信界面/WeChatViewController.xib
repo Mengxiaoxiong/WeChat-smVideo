@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeChatViewController">
+            <connections>
+                <outlet property="tableView" destination="5uG-eO-XGP" id="vdI-fa-J0H"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5uG-eO-XGP">
+                    <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                    <color key="backgroundColor" red="0.5129807692307693" green="0.5129807692307693" blue="0.5129807692307693" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5uG-eO-XGP" secondAttribute="bottom" constant="49" id="ELF-Yj-Iu8"/>
+                <constraint firstItem="5uG-eO-XGP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PAz-q8-d9i"/>
+                <constraint firstAttribute="trailing" secondItem="5uG-eO-XGP" secondAttribute="trailing" id="pqg-x3-nOL"/>
+                <constraint firstItem="5uG-eO-XGP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="q9Z-sD-iBu"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="264" y="239"/>
+        </view>
+    </objects>
+</document>

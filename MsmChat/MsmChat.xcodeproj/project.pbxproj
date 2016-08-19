@@ -69,6 +69,9 @@
 		19514B3B1D58A5750000D185 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19514B391D58A5750000D185 /* FindViewController.xib */; };
 		19514B3F1D58A58C0000D185 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19514B3D1D58A58C0000D185 /* MyViewController.m */; };
 		19514B401D58A58C0000D185 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19514B3E1D58A58C0000D185 /* MyViewController.xib */; };
+		199A20631D656F6F00E3C98E /* FZHPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A20621D656F6F00E3C98E /* FZHPopView.m */; };
+		19A9EF0D1D61D9A5008CCB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A9EF0C1D61D9A5008CCB56 /* Main.storyboard */; };
+		19A9EF161D61DE90008CCB56 /* XDDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A9EF151D61DE90008CCB56 /* XDDownMenuView.m */; };
 		624A5A6E1D3CBAAC00E9D0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5A6D1D3CBAAC00E9D0F0 /* main.m */; };
 		624A5AAC1D3CBC4900E9D0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624A5AA61D3CBC4900E9D0F0 /* Assets.xcassets */; };
 		624A5AAE1D3CBC4900E9D0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5AAA1D3CBC4900E9D0F0 /* AppDelegate.m */; };
@@ -165,6 +168,11 @@
 		19514B3C1D58A58C0000D185 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		19514B3D1D58A58C0000D185 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		19514B3E1D58A58C0000D185 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		199A20611D656F6F00E3C98E /* FZHPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FZHPopView.h; sourceTree = "<group>"; };
+		199A20621D656F6F00E3C98E /* FZHPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FZHPopView.m; sourceTree = "<group>"; };
+		19A9EF0C1D61D9A5008CCB56 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		19A9EF141D61DE90008CCB56 /* XDDownMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDownMenuView.h; sourceTree = "<group>"; };
+		19A9EF151D61DE90008CCB56 /* XDDownMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDownMenuView.m; sourceTree = "<group>"; };
 		624A5A691D3CBAAC00E9D0F0 /* MsmChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MsmChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		624A5A6D1D3CBAAC00E9D0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		624A5A861D3CBAAC00E9D0F0 /* MsmChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsmChatTests.m; sourceTree = "<group>"; };
@@ -324,9 +332,9 @@
 		19514B241D58A3230000D185 /* 发现界面 */ = {
 			isa = PBXGroup;
 			children = (
-				19514B371D58A5750000D185 /* FindViewController.h */,
-				19514B381D58A5750000D185 /* FindViewController.m */,
-				19514B391D58A5750000D185 /* FindViewController.xib */,
+				19D7FDD71D6483E6001CAC86 /* Model */,
+				19D7FDD61D6483E4001CAC86 /* View */,
+				19D7FDD51D6483E2001CAC86 /* Controller */,
 			);
 			path = "发现界面";
 			sourceTree = "<group>";
@@ -334,9 +342,9 @@
 		19514B251D58A3230000D185 /* 通讯录界面 */ = {
 			isa = PBXGroup;
 			children = (
-				19514B321D58A5430000D185 /* ContactsViewController.h */,
-				19514B331D58A5430000D185 /* ContactsViewController.m */,
-				19514B341D58A5430000D185 /* ContactsViewController.xib */,
+				19D7FDD41D6483C7001CAC86 /* Model */,
+				19D7FDD31D6483C5001CAC86 /* View */,
+				19D7FDD11D6483BF001CAC86 /* Controller */,
 			);
 			path = "通讯录界面";
 			sourceTree = "<group>";
@@ -344,9 +352,9 @@
 		19514B261D58A3230000D185 /* 微信界面 */ = {
 			isa = PBXGroup;
 			children = (
-				19514B2D1D58A5200000D185 /* WeChatViewController.h */,
-				19514B2E1D58A5200000D185 /* WeChatViewController.m */,
-				19514B2F1D58A5200000D185 /* WeChatViewController.xib */,
+				19D7FDD01D648396001CAC86 /* Model */,
+				19D7FDCF1D648393001CAC86 /* VIew */,
+				19D7FDCD1D6480C6001CAC86 /* Controller */,
 			);
 			path = "微信界面";
 			sourceTree = "<group>";
@@ -354,11 +362,111 @@
 		19514B271D58A3230000D185 /* 我界面 */ = {
 			isa = PBXGroup;
 			children = (
+				19D7FDDA1D648405001CAC86 /* Model */,
+				19D7FDD91D648403001CAC86 /* View */,
+				19D7FDD81D648402001CAC86 /* Controller */,
+			);
+			path = "我界面";
+			sourceTree = "<group>";
+		};
+		19D7FDCD1D6480C6001CAC86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19514B2D1D58A5200000D185 /* WeChatViewController.h */,
+				19514B2E1D58A5200000D185 /* WeChatViewController.m */,
+				19514B2F1D58A5200000D185 /* WeChatViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		19D7FDCF1D648393001CAC86 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				199A20611D656F6F00E3C98E /* FZHPopView.h */,
+				199A20621D656F6F00E3C98E /* FZHPopView.m */,
+				19A9EF141D61DE90008CCB56 /* XDDownMenuView.h */,
+				19A9EF151D61DE90008CCB56 /* XDDownMenuView.m */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		19D7FDD01D648396001CAC86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19D7FDD11D6483BF001CAC86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19514B321D58A5430000D185 /* ContactsViewController.h */,
+				19514B331D58A5430000D185 /* ContactsViewController.m */,
+				19514B341D58A5430000D185 /* ContactsViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		19D7FDD31D6483C5001CAC86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		19D7FDD41D6483C7001CAC86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19D7FDD51D6483E2001CAC86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19514B371D58A5750000D185 /* FindViewController.h */,
+				19514B381D58A5750000D185 /* FindViewController.m */,
+				19514B391D58A5750000D185 /* FindViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		19D7FDD61D6483E4001CAC86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		19D7FDD71D6483E6001CAC86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19D7FDD81D648402001CAC86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				19514B3C1D58A58C0000D185 /* MyViewController.h */,
 				19514B3D1D58A58C0000D185 /* MyViewController.m */,
 				19514B3E1D58A58C0000D185 /* MyViewController.xib */,
 			);
-			path = "我界面";
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		19D7FDD91D648403001CAC86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		19D7FDDA1D648405001CAC86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		624A5A601D3CBAAC00E9D0F0 = {
@@ -395,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				624A5A6D1D3CBAAC00E9D0F0 /* main.m */,
+				19A9EF0C1D61D9A5008CCB56 /* Main.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -604,6 +713,7 @@
 				190317811D59DC2F008AB46E /* test2.jpg in Resources */,
 				190317751D59DC2F008AB46E /* icon0.jpg in Resources */,
 				190317611D59DC2F008AB46E /* 12.jpg in Resources */,
+				19A9EF0D1D61D9A5008CCB56 /* Main.storyboard in Resources */,
 				190317771D59DC2F008AB46E /* icon2.jpg in Resources */,
 				190317661D59DC2F008AB46E /* 17.jpg in Resources */,
 				19514B311D58A5200000D185 /* WeChatViewController.xib in Resources */,
@@ -619,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				624A5A6E1D3CBAAC00E9D0F0 /* main.m in Sources */,
+				199A20631D656F6F00E3C98E /* FZHPopView.m in Sources */,
 				190317241D59DABA008AB46E /* XDAppFrameTabBarController.m in Sources */,
 				19514B351D58A5430000D185 /* ContactsViewController.m in Sources */,
 				19514B3F1D58A58C0000D185 /* MyViewController.m in Sources */,
@@ -629,6 +740,7 @@
 				624A5B001D3CC6AB00E9D0F0 /* MLoginViewController.m in Sources */,
 				190317921D59DEF3008AB46E /* XDBaseNavigationController.m in Sources */,
 				19514B3A1D58A5750000D185 /* FindViewController.m in Sources */,
+				19A9EF161D61DE90008CCB56 /* XDDownMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,11 +843,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MsmChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im.MsmChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MsmChat/界面/MsmChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/MBaseViewProject";
 			};
@@ -745,11 +860,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MsmChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im.MsmChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MsmChat/界面/MsmChat-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include/MBaseViewProject";
 			};
