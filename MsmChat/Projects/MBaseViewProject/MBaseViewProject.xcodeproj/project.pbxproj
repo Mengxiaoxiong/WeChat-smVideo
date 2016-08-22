@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B96A031D6950F50071E998 /* GloabalDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19B96A021D694F980071E998 /* GloabalDefines.h */; };
+		19B96A0A1D6980090071E998 /* XDAnalogDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B96A091D6980090071E998 /* XDAnalogDataGenerator.m */; };
+		19B96A0B1D6980770071E998 /* XDAnalogDataGenerator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19B96A081D6980090071E998 /* XDAnalogDataGenerator.h */; };
+		19B96A0C1D6980770071E998 /* XDAnalogDataGenerator.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19B96A091D6980090071E998 /* XDAnalogDataGenerator.m */; };
 		624A5C7B1D3DC25100E9D0F0 /* MBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5C7A1D3DC25100E9D0F0 /* MBaseViewController.m */; };
 		624A5C7C1D3DC26700E9D0F0 /* MBaseViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 624A5C791D3DC25100E9D0F0 /* MBaseViewController.h */; };
 		624A5C7F1D3DC2FA00E9D0F0 /* MTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5C7E1D3DC2FA00E9D0F0 /* MTableViewController.m */; };
@@ -22,6 +26,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				19B96A0B1D6980770071E998 /* XDAnalogDataGenerator.h in CopyFiles */,
+				19B96A0C1D6980770071E998 /* XDAnalogDataGenerator.m in CopyFiles */,
+				19B96A031D6950F50071E998 /* GloabalDefines.h in CopyFiles */,
 				62D105E21D4DB6EC0023A1AE /* MTableViewController.h in CopyFiles */,
 				62D105E31D4DB6EC0023A1AE /* MRefreshTableViewController.h in CopyFiles */,
 				624A5C7C1D3DC26700E9D0F0 /* MBaseViewController.h in CopyFiles */,
@@ -31,6 +38,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		19B96A021D694F980071E998 /* GloabalDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GloabalDefines.h; sourceTree = "<group>"; };
+		19B96A081D6980090071E998 /* XDAnalogDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDAnalogDataGenerator.h; sourceTree = "<group>"; };
+		19B96A091D6980090071E998 /* XDAnalogDataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDAnalogDataGenerator.m; sourceTree = "<group>"; };
 		624A5C5B1D3DBF0400E9D0F0 /* libMBaseViewProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBaseViewProject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		624A5C791D3DC25100E9D0F0 /* MBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBaseViewController.h; sourceTree = "<group>"; };
 		624A5C7A1D3DC25100E9D0F0 /* MBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBaseViewController.m; sourceTree = "<group>"; };
@@ -51,6 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B969FE1D694F140071E998 /* GloabalDefines */ = {
+			isa = PBXGroup;
+			children = (
+				19B96A021D694F980071E998 /* GloabalDefines.h */,
+			);
+			name = GloabalDefines;
+			sourceTree = "<group>";
+		};
+		19B96A071D697FE00071E998 /* utilis */ = {
+			isa = PBXGroup;
+			children = (
+				19B96A081D6980090071E998 /* XDAnalogDataGenerator.h */,
+				19B96A091D6980090071E998 /* XDAnalogDataGenerator.m */,
+			);
+			name = utilis;
+			sourceTree = "<group>";
+		};
 		624A5C341D3DBEC300E9D0F0 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +97,8 @@
 		624A5C5C1D3DBF0400E9D0F0 /* MBaseViewProject */ = {
 			isa = PBXGroup;
 			children = (
+				19B96A071D697FE00071E998 /* utilis */,
+				19B969FE1D694F140071E998 /* GloabalDefines */,
 				624A5C711D3DC23700E9D0F0 /* MButton */,
 				624A5C721D3DC23700E9D0F0 /* MColor */,
 				624A5C731D3DC23700E9D0F0 /* MFont */,
@@ -203,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				624A5C821D3DC30F00E9D0F0 /* MRefreshTableViewController.m in Sources */,
+				19B96A0A1D6980090071E998 /* XDAnalogDataGenerator.m in Sources */,
 				624A5C7B1D3DC25100E9D0F0 /* MBaseViewController.m in Sources */,
 				624A5C7F1D3DC2FA00E9D0F0 /* MTableViewController.m in Sources */,
 			);

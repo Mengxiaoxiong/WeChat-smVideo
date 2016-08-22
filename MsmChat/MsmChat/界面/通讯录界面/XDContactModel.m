@@ -10,4 +10,5 @@
 
 @implementation XDContactModel
 
+
 @end

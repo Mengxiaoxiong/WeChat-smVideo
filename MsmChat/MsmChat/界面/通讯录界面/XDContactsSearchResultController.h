@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface XDContactsSearchResultController : UIViewController
+#import "MTableViewController.h"
+///搜索结果调用页
+@interface XDContactsSearchResultController : MTableViewController
 
 @end

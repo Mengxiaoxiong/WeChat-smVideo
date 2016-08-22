@@ -64,7 +64,6 @@
 		19514B301D58A5200000D185 /* WeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19514B2E1D58A5200000D185 /* WeChatViewController.m */; };
 		19514B311D58A5200000D185 /* WeChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19514B2F1D58A5200000D185 /* WeChatViewController.xib */; };
 		19514B351D58A5430000D185 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19514B331D58A5430000D185 /* ContactsViewController.m */; };
-		19514B361D58A5430000D185 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19514B341D58A5430000D185 /* ContactsViewController.xib */; };
 		19514B3A1D58A5750000D185 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19514B381D58A5750000D185 /* FindViewController.m */; };
 		19514B3B1D58A5750000D185 /* FindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19514B391D58A5750000D185 /* FindViewController.xib */; };
 		19514B3F1D58A58C0000D185 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19514B3D1D58A58C0000D185 /* MyViewController.m */; };
@@ -72,6 +71,11 @@
 		199A20631D656F6F00E3C98E /* FZHPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A20621D656F6F00E3C98E /* FZHPopView.m */; };
 		19A9EF0D1D61D9A5008CCB56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19A9EF0C1D61D9A5008CCB56 /* Main.storyboard */; };
 		19A9EF161D61DE90008CCB56 /* XDDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A9EF151D61DE90008CCB56 /* XDDownMenuView.m */; };
+		19B969FD1D694D860071E998 /* XDContactsSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B969FC1D694D860071E998 /* XDContactsSearchResultController.m */; };
+		19B96A061D6951F40071E998 /* XDContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B96A051D6951F40071E998 /* XDContactModel.m */; };
+		19B96A0F1D6983380071E998 /* XDContactsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B96A0E1D6983380071E998 /* XDContactsTableViewCell.m */; };
+		19B96A171D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B96A141D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		19B96A181D6988AF0071E998 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B96A161D6988AF0071E998 /* UIView+SDAutoLayout.m */; };
 		624A5A6E1D3CBAAC00E9D0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5A6D1D3CBAAC00E9D0F0 /* main.m */; };
 		624A5AAC1D3CBC4900E9D0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624A5AA61D3CBC4900E9D0F0 /* Assets.xcassets */; };
 		624A5AAE1D3CBC4900E9D0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A5AAA1D3CBC4900E9D0F0 /* AppDelegate.m */; };
@@ -161,7 +165,6 @@
 		19514B2F1D58A5200000D185 /* WeChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeChatViewController.xib; sourceTree = "<group>"; };
 		19514B321D58A5430000D185 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		19514B331D58A5430000D185 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
-		19514B341D58A5430000D185 /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 		19514B371D58A5750000D185 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		19514B381D58A5750000D185 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		19514B391D58A5750000D185 /* FindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindViewController.xib; sourceTree = "<group>"; };
@@ -173,6 +176,17 @@
 		19A9EF0C1D61D9A5008CCB56 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		19A9EF141D61DE90008CCB56 /* XDDownMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDownMenuView.h; sourceTree = "<group>"; };
 		19A9EF151D61DE90008CCB56 /* XDDownMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDownMenuView.m; sourceTree = "<group>"; };
+		19B969FB1D694D860071E998 /* XDContactsSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDContactsSearchResultController.h; sourceTree = "<group>"; };
+		19B969FC1D694D860071E998 /* XDContactsSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDContactsSearchResultController.m; sourceTree = "<group>"; };
+		19B96A041D6951F40071E998 /* XDContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDContactModel.h; sourceTree = "<group>"; };
+		19B96A051D6951F40071E998 /* XDContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDContactModel.m; sourceTree = "<group>"; };
+		19B96A0D1D6983380071E998 /* XDContactsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDContactsTableViewCell.h; sourceTree = "<group>"; };
+		19B96A0E1D6983380071E998 /* XDContactsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDContactsTableViewCell.m; sourceTree = "<group>"; };
+		19B96A121D6988AF0071E998 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		19B96A131D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		19B96A141D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		19B96A151D6988AF0071E998 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		19B96A161D6988AF0071E998 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		624A5A691D3CBAAC00E9D0F0 /* MsmChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MsmChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		624A5A6D1D3CBAAC00E9D0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		624A5A861D3CBAAC00E9D0F0 /* MsmChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsmChatTests.m; sourceTree = "<group>"; };
@@ -372,6 +386,26 @@
 			path = "我界面";
 			sourceTree = "<group>";
 		};
+		19B96A101D69885F0071E998 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				19B96A111D6988AF0071E998 /* SDAutoLayout */,
+			);
+			name = Vender;
+			sourceTree = "<group>";
+		};
+		19B96A111D6988AF0071E998 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				19B96A121D6988AF0071E998 /* SDAutoLayout.h */,
+				19B96A131D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.h */,
+				19B96A141D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.m */,
+				19B96A151D6988AF0071E998 /* UIView+SDAutoLayout.h */,
+				19B96A161D6988AF0071E998 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
 		19D7FDCD1D6480C6001CAC86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,9 +437,10 @@
 		19D7FDD11D6483BF001CAC86 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				19B969FB1D694D860071E998 /* XDContactsSearchResultController.h */,
+				19B969FC1D694D860071E998 /* XDContactsSearchResultController.m */,
 				19514B321D58A5430000D185 /* ContactsViewController.h */,
 				19514B331D58A5430000D185 /* ContactsViewController.m */,
-				19514B341D58A5430000D185 /* ContactsViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -413,6 +448,8 @@
 		19D7FDD31D6483C5001CAC86 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				19B96A0D1D6983380071E998 /* XDContactsTableViewCell.h */,
+				19B96A0E1D6983380071E998 /* XDContactsTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -420,6 +457,8 @@
 		19D7FDD41D6483C7001CAC86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				19B96A041D6951F40071E998 /* XDContactModel.h */,
+				19B96A051D6951F40071E998 /* XDContactModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -547,6 +586,7 @@
 		624A5AA51D3CBC4900E9D0F0 /* 资源 */ = {
 			isa = PBXGroup;
 			children = (
+				19B96A101D69885F0071E998 /* Vender */,
 				190317251D59DC2E008AB46E /* Resources */,
 				624A5AAF1D3CBD4B00E9D0F0 /* Info.plist */,
 				624A5AA61D3CBC4900E9D0F0 /* Assets.xcassets */,
@@ -729,7 +769,6 @@
 				190317731D59DC2F008AB46E /* 8.jpg in Resources */,
 				190317891D59DC2F008AB46E /* pic4.jpg in Resources */,
 				190317601D59DC2F008AB46E /* 11.jpg in Resources */,
-				19514B361D58A5430000D185 /* ContactsViewController.xib in Resources */,
 				1903176E1D59DC2F008AB46E /* 3.jpg in Resources */,
 				1903177A1D59DC2F008AB46E /* Contacts.xcassets in Resources */,
 				190317651D59DC2F008AB46E /* 16.jpg in Resources */,
@@ -760,14 +799,19 @@
 			files = (
 				624A5A6E1D3CBAAC00E9D0F0 /* main.m in Sources */,
 				199A20631D656F6F00E3C98E /* FZHPopView.m in Sources */,
+				19B96A0F1D6983380071E998 /* XDContactsTableViewCell.m in Sources */,
 				190317241D59DABA008AB46E /* XDAppFrameTabBarController.m in Sources */,
+				19B96A061D6951F40071E998 /* XDContactModel.m in Sources */,
 				19514B351D58A5430000D185 /* ContactsViewController.m in Sources */,
 				19514B3F1D58A58C0000D185 /* MyViewController.m in Sources */,
+				19B969FD1D694D860071E998 /* XDContactsSearchResultController.m in Sources */,
 				624A5AAE1D3CBC4900E9D0F0 /* AppDelegate.m in Sources */,
+				19B96A171D6988AF0071E998 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				624A5AFD1D3CC34400E9D0F0 /* MLoginManager.m in Sources */,
 				19514B301D58A5200000D185 /* WeChatViewController.m in Sources */,
 				1903179B1D59E00E008AB46E /* XDBaseRefreshView.m in Sources */,
 				624A5B001D3CC6AB00E9D0F0 /* MLoginViewController.m in Sources */,
+				19B96A181D6988AF0071E998 /* UIView+SDAutoLayout.m in Sources */,
 				190317921D59DEF3008AB46E /* XDBaseNavigationController.m in Sources */,
 				19514B3A1D58A5750000D185 /* FindViewController.m in Sources */,
 				19A9EF161D61DE90008CCB56 /* XDDownMenuView.m in Sources */,

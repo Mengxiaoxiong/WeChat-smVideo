@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//模拟数据源
 @interface XDAnalogDataGenerator : NSObject
+
++ (NSString *)randomName;
++ (NSString *)randomIconImageName;
++ (NSString *)randomMessage;
 
 @end

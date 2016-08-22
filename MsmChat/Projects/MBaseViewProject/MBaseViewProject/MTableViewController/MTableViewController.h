@@ -10,4 +10,6 @@
 
 @interface MTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end

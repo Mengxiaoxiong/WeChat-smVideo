@@ -56,6 +56,8 @@ static CGFloat viewOffset = 64;
     //隐藏边框
 //    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     self.searchBar.placeholder = @"搜索";
+    CGFloat rgb = 0.3;
+    self.searchBar.barTintColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1];
     [self.view addSubview:self.searchBar];
 //    self.tableView.tableHeaderView = self.searchBar;
     

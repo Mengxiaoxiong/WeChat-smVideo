@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class XDContactModel;
 
 @interface XDContactsTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) XDContactModel *model;
+
+///cell高度
++ (CGFloat)fixedHeight;
 
 @end

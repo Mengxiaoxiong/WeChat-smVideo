@@ -10,4 +10,8 @@
 
 @interface XDContactModel : NSObject
 
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *wxId;
+@property (nonatomic, copy) NSString *imageName;
+
 @end
