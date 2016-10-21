@@ -8,20 +8,18 @@
 
 #import "WeChatViewController.h"
 #import "XDDownMenuView.h"
-#import "FZHPopView.h"
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#import "XDContactsSearchResultController.h"
+#import "GloabalDefines.h"
+#import "XDContactsTableViewCell.h"
 
-static CGFloat viewOffset = 64;
-@interface WeChatViewController () <UISearchBarDelegate, FZHPopViewDelegate>
+@interface WeChatViewController () <UISearchBarDelegate>
 //下拉小菜单
 @property (nonatomic, strong) UIView *coverView;
 @property (nonatomic, strong) XDDownMenuView *menuView;
 
 //SearchBar
-@property (nonatomic, strong) UISearchBar *searchBar;
-@property (nonatomic, strong) FZHPopView *popView;
 @property (nonatomic, strong) NSMutableArray *titleArray;
+@property (nonatomic, strong) UISearchController *searchController;
 
 @end
 
@@ -35,32 +33,40 @@ static CGFloat viewOffset = 64;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self setupSearchBar];
-    [self setupPopView];
     [self createDownMenu];
-    self.titleArray = [NSMutableArray arrayWithObjects:@"friend",@"article",@"number", nil];
-    
-
-    
-   
 }
 
-///设置SearchBar
+///设置搜索框
 - (void)setupSearchBar{
+    //点击searchBar 的搜索背景
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:[XDContactsSearchResultController new]];
+    self.searchController.view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.95];
     
-    self.searchBar = [[UISearchBar alloc]init];
-    self.searchBar.frame = CGRectMake(0, viewOffset, SCREEN_WIDTH, 40);
-    //设置圆角
-//    self.searchBar.layer.cornerRadius = 3;
-//    self.searchBar.layer.masksToBounds = YES;
-    self.searchBar.delegate = self;
-    //隐藏边框
-//    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
-    self.searchBar.placeholder = @"搜索";
-    CGFloat rgb = 0.3;
-    self.searchBar.barTintColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1];
-    [self.view addSubview:self.searchBar];
-//    self.tableView.tableHeaderView = self.searchBar;
+    //设置searchBar
+    UISearchBar *bar = self.searchController.searchBar;
+    bar.barStyle = UIBarStyleDefault;
+    bar.translucent = YES;
+    bar.placeholder = @"搜索";
+    bar.barTintColor = Global_mainBackgroundColor;
+    bar.tintColor = Global_tintColor;
+    UIImageView *view = [[[bar.subviews objectAtIndex:0] subviews] firstObject];
+    view.layer.borderColor = Global_mainBackgroundColor.CGColor;
+    view.layer.borderWidth = 1;
     
+    bar.layer.borderColor = [UIColor redColor].CGColor;
+    bar.showsBookmarkButton = YES;
+    [bar setImage:[UIImage imageNamed:@"VoiceSearchStartBtn"] forSearchBarIcon:UISearchBarIconBookmark state:UIControlStateNormal];
+    bar.delegate = self;
+    CGRect rect = bar.frame;
+    rect.size.height = 44;
+    bar.frame = rect;
+    
+    //将搜索框添加到tableView头视图
+    self.tableView.tableHeaderView = bar;
+    self.tableView.rowHeight = [XDContactsTableViewCell fixedHeight];
+    self.tableView.sectionIndexColor = [UIColor lightGrayColor];
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+
 }
 
 ///小菜单判断
@@ -100,7 +106,6 @@ static CGFloat viewOffset = 64;
     
 }
 
-
 #pragma mark - tableView delegate and datasoure
 //行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -118,15 +123,12 @@ static CGFloat viewOffset = 64;
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:st];
     }
-    
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   
-    
     self.menuView.hidden = YES;
 }
-
+///判断小菜单打开还是关闭
 - (IBAction)menuClick:(id)sender {
     
     if (self.menuView.hidden) {
@@ -137,61 +139,9 @@ static CGFloat viewOffset = 64;
     }
 
 }
-
-#pragma mark SearchBar Delegate
-
--(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        //1.
-        self.navigationController.navigationBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
-        self.searchBar.transform = CGAffineTransformMakeTranslation(0, -viewOffset);
-        
-        //2.
-        self.searchBar.showsCancelButton = YES;
-        [self setupCancelButton];
-        
-        [self.popView showThePopViewWithArray:self.titleArray];
-        
-    }];
-}
-- (void)setupPopView{
-    self.popView = [[FZHPopView alloc]init];
-    self.popView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
-    self.popView.fzhPopViewDelegate = self;
-    [self.view addSubview:self.popView];
-}
-
-- (void)setupCancelButton{
-    
-    UIButton *cancelButton = [self.searchBar valueForKey:@"_cancelButton"];
-    [cancelButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [cancelButton addTarget:self action:@selector(cancelButtonClickEvent) forControlEvents:UIControlEventTouchUpInside];
+#pragma mark - UISearchBarDelegate
+- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar
+{
     
 }
-- (void)cancelButtonClickEvent{
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-        //1.
-        self.navigationController.navigationBar.transform = CGAffineTransformIdentity;
-        self.searchBar.transform = CGAffineTransformIdentity;
-        //2.
-        self.searchBar.showsCancelButton = NO;
-        [self.searchBar endEditing:YES];
-        //3.
-        [self.popView dismissThePopView];
-    }];
-    
-    self.searchBar.placeholder = @"搜索";
-    [self.searchBar setImage:[UIImage imageNamed:@"search"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
-}
-
-#pragma mark -FZHPopViewDelegate
--(void)getTheButtonTitleWithButton:(UIButton *)button{
-    self.searchBar.placeholder = button.titleLabel.text;
-    [self.searchBar setImage:[UIImage imageNamed:@"common"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
-    [self.popView dismissThePopView];
-}
-
 @end

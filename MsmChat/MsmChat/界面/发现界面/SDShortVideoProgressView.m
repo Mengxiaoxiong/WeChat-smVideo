@@ -27,8 +27,7 @@
  */
 
 #import "SDShortVideoProgressView.h"
-
-#import "GlobalDefines.h"
+#import "GloabalDefines.h"
 #import "UIView+SDAutoLayout.h"
 
 @implementation SDShortVideoProgressView

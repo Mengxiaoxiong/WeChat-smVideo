@@ -9,17 +9,26 @@
 #import "XDContactsSearchResultController.h"
 
 @interface XDContactsSearchResultController ()
-
+@property (nonatomic,strong) NSMutableString *aStr;
 @end
+typedef void (^myBlock)();
 
 @implementation XDContactsSearchResultController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    CGFloat rgb = 0.3;
-    self.view.backgroundColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1];
     
+}
+
+-(UIButton *)aBtn{
+    if (!_aBtn) {
+        _aBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_aBtn setFrame:CGRectMake(0, 0, 50, 50)];
+        [_aBtn setBackgroundColor:[UIColor redColor]];
+        [self.view addSubview:self.aBtn];
+    }
+    return _aBtn;
 }
 
 

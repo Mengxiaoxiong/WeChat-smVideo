@@ -24,6 +24,9 @@
 -(id)initWithlist:(NSArray *)list height:(CGFloat)height;
 //显示在浏览
 - (void)showInView:(UIViewController *)Sview;
+//调用
+- (void)tappedCancel;
+
 @property(nonatomic,assign) id <XDPromptBoxDelegate> delegate;
 
 @end

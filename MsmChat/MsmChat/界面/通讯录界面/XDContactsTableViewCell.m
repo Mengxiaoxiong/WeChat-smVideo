@@ -10,7 +10,7 @@
 #import "UIView+SDAutoLayout.h"
 #import "XDContactModel.h"
 
-//cell
+
 @implementation XDContactsTableViewCell
 {
     UIImageView *_iconImageView;

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 ///自定制加号下拉小菜单
-
 @interface XDDownMenuView : UIView
 
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBaseViewController : UIViewController
-
+@property (nonatomic,strong) NSMutableArray *dataSource;
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/***照片集装***/
 @interface XDPhotoContainerView : UIView
+@property (nonatomic, strong) NSArray *picPathStringsArray;
 
 @end

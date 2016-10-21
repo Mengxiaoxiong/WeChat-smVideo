@@ -16,9 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadComponent];
+    [self loadDataSource];
     // Do any additional setup after loading the view.
 }
-
+/**** 加载组件 *****/
+-(void)loadComponent{
+    
+}
+/**** 加载数据源 *****/
+-(void)loadDataSource{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

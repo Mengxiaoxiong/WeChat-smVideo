@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//自定制cell
 @interface MyTableViewCell : UITableViewCell
 
 @end

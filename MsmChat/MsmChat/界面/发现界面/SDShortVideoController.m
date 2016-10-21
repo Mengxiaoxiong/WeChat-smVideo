@@ -32,8 +32,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 #import "UIView+SDAutoLayout.h"
-#import "GlobalDefines.h"
-
+#import "GloabalDefines.h"
 #import "SDShortVideoProgressView.h"
 
 

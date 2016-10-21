@@ -10,7 +10,7 @@
 /***朋友圈自定制Cell***/
 //自定制cell代理
 @protocol XDCircleOfFriendsDelegate <NSObject>
-///朋友圈按钮
+//赞
 - (void)didClickLikeButtonInCell:(UITableViewCell *)cell;
 ///评论按钮
 - (void)didClickcCommentButtonInCell:(UITableViewCell *)cell;
@@ -23,8 +23,7 @@
 
 @property (nonatomic, weak) id<XDCircleOfFriendsDelegate> delegate;
 
-@property (nonatomic, strong) XDCircleOfFriendsCellModel *model;
-
+@property (nonatomic, strong) XDCircleOfFriendsCellModel *model; ///记录
 @property (nonatomic, strong) NSIndexPath *indexPath;
 
 @property (nonatomic, copy) void (^moreButtonClickedBlock)(NSIndexPath *indexPath);

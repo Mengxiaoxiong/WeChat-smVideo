@@ -7,7 +7,9 @@
 //
 
 #import "ContactsViewController.h"
+//搜索调用页
 #import "XDContactsSearchResultController.h"
+//自定制cell
 #import "XDContactsTableViewCell.h"
 #import "XDAnalogDataGenerator.h"
 #import "XDContactModel.h"
@@ -29,6 +31,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self CreateASearchBox];
+    
+}
+//创建搜索框
+-(void)CreateASearchBox {
+    //添加右上加号按钮
+    UIBarButtonItem *but = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"contacts_add_friend.png"] style:(UIBarButtonItemStyleDone) target:self action:@selector(AddAFriend)];
+    self.navigationItem.rightBarButtonItem = but;
     //点击searchBar 的搜索背景
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:[XDContactsSearchResultController new]];
     self.searchController.view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.95];
@@ -52,26 +63,27 @@
     rect.size.height = 44;
     bar.frame = rect;
     
-    //添加到tableView头视图
+    //将搜索框添加到tableView头视图
     self.tableView.tableHeaderView = bar;
     self.tableView.rowHeight = [XDContactsTableViewCell fixedHeight];
     self.tableView.sectionIndexColor = [UIColor lightGrayColor];
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
-  
+    
     [self genDataWithCount:30];
     
     //设置每行段头的高度
     self.tableView.sectionHeaderHeight = 25;
-    
 }
-
-
+//添加朋友
+-(void)AddAFriend {
+    NSLog(@"添加朋友");
+}
 - (void)genDataWithCount:(NSInteger)count
 {
     
-    NSArray *xings = @[@"赵",@"钱",@"孙",@"李",@"周",@"吴",@"郑",@"王",@"冯",@"陈",@"楚",@"卫",@"蒋",@"沈",@"韩",@"杨"];
+    NSArray *xings = @[@"高",@"猛",@"好",@"李",@"望",@"吴",@"郑",@"王",@"冯",@"陈",@"楚",@"卫",@"蒋",@"沈",@"韩",@"杨"];
     NSArray *ming1 = @[@"大",@"美",@"帅",@"应",@"超",@"海",@"江",@"湖",@"春",@"夏",@"秋",@"冬",@"上",@"左",@"有",@"纯"];
-    NSArray *ming2 = @[@"强",@"好",@"领",@"亮",@"超",@"华",@"奎",@"海",@"工",@"青",@"红",@"潮",@"兵",@"垂",@"刚",@"山"];
+    NSArray *ming2 = @[@"强",@"好",@"领",@"亮",@"超",@"华",@"奎",@"海",@"工",@"青",@"交",@"潮",@"兵",@"垂",@"刚",@"山"];
     
     for (int i = 0; i < count; i++) {
         
@@ -81,14 +93,12 @@
         if (arc4random_uniform(10) > 3) {
             NSString *ming = ming2[arc4random_uniform((int)ming2.count)];
             name = [name stringByAppendingString:ming];
-            
         }
         
         XDContactModel *model = [XDContactModel new];
         model.name = name;
         model.imageName = [XDAnalogDataGenerator randomIconImageName];
         [self.dataArray addObject:model];
-   
     }
     
     [self setUpTableSection];
@@ -97,20 +107,20 @@
 - (void) setUpTableSection {
     UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
     
-    //create a temp sectionArray
+    //创建一个临时的 sectionArray
     NSUInteger numberOfSections = [[collation sectionTitles] count];
     NSMutableArray *newSectionArray =  [[NSMutableArray alloc]init];
     for (NSUInteger index = 0; index<numberOfSections; index++) {
         [newSectionArray addObject:[[NSMutableArray alloc]init]];
     }
     
-    // insert Persons info into newSectionArray
+    // 插入每个人的信息到newSectionArray
     for (XDContactModel *model in self.dataArray) {
         NSUInteger sectionIndex = [collation sectionForObject:model collationStringSelector:@selector(name)];
         [newSectionArray[sectionIndex] addObject:model];
     }
     
-    //sort the person of each section
+    //排序每个部分的人
     for (NSUInteger index=0; index<numberOfSections; index++) {
         NSMutableArray *personsForSection = newSectionArray[index];
         NSArray *sortedPersonsForSection = [collation sortedArrayFromArray:personsForSection collationStringSelector:@selector(name)];
@@ -144,14 +154,9 @@
     
     [newSectionArray insertObject:operrationModels atIndex:0];
     [self.sectionTitlesArray insertObject:@"" atIndex:0];
-    
     self.sectionArray = newSectionArray;
     
 }
-
-
-
-
 
 #pragma mark - tableView delegate and datasoure
 
@@ -163,7 +168,6 @@
     return [self.sectionArray[section] count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *ID = @"XDContacts";
     XDContactsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
@@ -173,17 +177,14 @@
     
     NSUInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
-    
     XDContactModel *model = self.sectionArray[section][row];
     cell.model = model;
-    
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return [self.sectionTitlesArray objectAtIndex:section];
 }
-
 
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
     return self.sectionTitlesArray;
@@ -193,16 +194,10 @@
     
 }
 
-
-
-
 #pragma mark - UISearchBarDelegate
-
 - (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar
 {
     
 }
-
-
 
 @end

@@ -10,5 +10,5 @@
 #import "MTableViewController.h"
 ///搜索结果调用页
 @interface XDContactsSearchResultController : MTableViewController
-
+@property (nonatomic,strong) UIButton *aBtn;
 @end

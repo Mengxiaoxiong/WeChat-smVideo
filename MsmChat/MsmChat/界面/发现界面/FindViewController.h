@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTableViewController.h"
 
-@interface FindViewController : UIViewController
+///发现页
+@interface FindViewController : MTableViewController 
 
 @end

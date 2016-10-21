@@ -15,7 +15,6 @@
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(MLoginManager);
 
-
 #pragma mark - 初始化配置
 -(void)judgeCondition:(UIWindow *)window{
     [self loginJudgement];
@@ -25,6 +24,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MLoginManager);
     if (Client_Version_Type == 2) {//测试版
         [self gotoWeChatMainView];
     }else if(Client_Version_Type == 0)//正式版
+        
     {
         //判断是否首次进入新版本
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"isNewLaunch"]){
@@ -37,6 +37,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MLoginManager);
 //登录选择器
 - (void)swichLogin{
    /**此处写跳转登录的代码**/
+    
 }
 
 #pragma mark - 跳转微信
@@ -44,7 +45,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MLoginManager);
 -(void)gotoWeChatMainView{
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     delegate.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    delegate.window.backgroundColor = [UIColor redColor];
     delegate.window.rootViewController = [XDAppFrameTabBarController new];
     [delegate.window makeKeyAndVisible];
     [self setupNavBar];

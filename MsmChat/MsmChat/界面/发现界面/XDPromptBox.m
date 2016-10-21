@@ -7,6 +7,7 @@
 //
 
 #import "XDPromptBox.h"
+#import "XDTimeLineTableViewController.h"
 #define KNavitionBarHeight 64
 @interface XDPromptBox()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
 /**
@@ -20,7 +21,7 @@
 -(id)initWithlist:(NSArray *)list height:(CGFloat)height{
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+        self.frame = CGRectMake(0, -64, kScreenWidth, kScreenHeight);
         self.backgroundColor = ColorWithRGBA(0, 0, 0, .7);
         view = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 49 * [list count] + 7) style:UITableViewStylePlain];
         view.dataSource = self;
@@ -63,16 +64,28 @@
     }];
     
 }
-
+//点击消失
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    
     if([touch.view isKindOfClass:[self class]]){
+        
         return YES;
     }
+    
     return NO;
 }
 
 -(void)tappedCancel{
     [UIView animateWithDuration:.25 animations:^{
+        /**
+         *  此处添加通知使键盘能够滑动
+         **/
+        //创建一个消息对象
+        NSNotification * notice = [NSNotification notificationWithName:@"123" object:nil userInfo:@{@"1":@"123"}];
+        //发送消息
+        [[NSNotificationCenter defaultCenter]postNotification:notice];
+        
+        
         [view setFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 0)];
         [view setAlpha:0];
     } completion:^(BOOL finished) {
@@ -109,9 +122,7 @@
         
         if(cell==nil){
             
-            cell = [[XDPromptBoxCell
-                     
-                     alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            cell = [[XDPromptBoxCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
         if (indexPath.row == listdata.count) {
             [cell setData:[listdata objectAtIndex:listdata.count-1]];
@@ -121,11 +132,6 @@
         
         return cell;
     }
-    
-    
-    
-    
-    
     // Configure the cell...
     
 }

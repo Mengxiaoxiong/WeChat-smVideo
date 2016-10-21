@@ -8,6 +8,8 @@
 
 #import "XDImagePicker.h"
 #import "XDPromptBox.h"
+#import "XDSmallVideoViewController.h"
+
 @interface XDImagePicker ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,XDPromptBoxDelegate>
 
 @end
@@ -19,6 +21,7 @@
     PickCallback _callback;
     BOOL _animated;
 }
+
 
 +(instancetype)shareInstance {
     static XDImagePicker *instance = nil;
@@ -33,7 +36,6 @@
 /**
  * 设置数据
  **/
-//设置数据
 -(NSArray *)avaiablePickerSheetModel{
     XDPromptBoxModel *Model_0 = [[XDPromptBoxModel alloc]init];
     Model_0.title = @"小视频";
@@ -63,13 +65,19 @@
 
 -(void)didSelectIndex:(NSInteger)index{
     if (index == 0) {
-        //拍照[self openCamera:self];
-        [self openCamera];
+        //自定制录制小视频
+//        XDSmallVideoViewController *small = [XDSmallVideoViewController new];
+//        [_screenController presentViewController:small animated:_animated completion:^{}];
+//        XDSmallVideoViewController *sma = [XDSmallVideoViewController new];
+//        [_screenController presentViewController:sma animated:YES completion:nil];
+        NSLog(@"小视频");
     }else if (index == 1){
-        //相册 [self openPhotoLibrary:self];
-        [self openPhotoLibrary];
+        //拍照[self openCamera:self];
+       [self openCamera];
+        NSLog(@"拍照");
     }else if (index == 2){
-        
+        [self openPhotoLibrary];
+        NSLog(@"手机相册选取");
     }
 }
 

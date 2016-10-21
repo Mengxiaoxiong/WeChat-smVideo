@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+//自定制cell
 @class XDContactModel;
 
 @interface XDContactsTableViewCell : UITableViewCell

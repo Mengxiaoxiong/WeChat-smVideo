@@ -11,7 +11,4 @@
 @interface WeChatViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
-
-
 @end

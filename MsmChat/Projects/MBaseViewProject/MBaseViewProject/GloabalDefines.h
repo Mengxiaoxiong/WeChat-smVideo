@@ -10,6 +10,13 @@
 #ifndef GloabalDefines_h
 #define GloabalDefines_h
 
+#define JHMargin 30
+
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height;
+
+#define Global_drawRect colorWithRed:(73 / 255.0) green:(72 / 255.0) blue:(75 / 255.0) alpha:1
 
 #define SDColor(r, g, b, a) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]
 

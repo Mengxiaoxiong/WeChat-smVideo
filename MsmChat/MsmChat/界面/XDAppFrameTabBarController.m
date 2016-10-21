@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     NSArray *childItemsArray = @[
                                  @{kClassKey  : @"WeChatViewController",
                                    kTitleKey  : @"微信",
@@ -54,19 +53,13 @@
         UIViewController *vc = [NSClassFromString(dict[kClassKey])new];
         //设置导航的名字
         vc.title = dict[kTitleKey];
-        
-        
         XDBaseNavigationController *nav = [[XDBaseNavigationController alloc]initWithRootViewController:vc];
         UITabBarItem *item = nav.tabBarItem;
-        
-//        item.title = dict[kTitleKey];
         item.image = [UIImage imageNamed:dict[kImgKey]];
         //未点击的图片
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
         //点击后的颜色
         [item setTitleTextAttributes:@{NSForegroundColorAttributeName: Global_tintColor} forState:(UIControlStateSelected)];
-        
         //添加
         [self addChildViewController:nav];
         
